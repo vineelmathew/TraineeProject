@@ -24,12 +24,11 @@ public class TraineeMain {
         traineemap.put(trainee3.getId(), trainee3);
         traineemap.put(trainee4.getId(), trainee4);
         for (Trainee trainee : traineemap.values()) {
-            Trainee typeTrainee = (Trainee) trainee;
-            boolean iscse = typeTrainee instanceof CStrainee;
+            boolean iscse = trainee instanceof CStrainee;
             if (iscse) {
-                cStraineeSet.add((CStrainee) typeTrainee);
+                cStraineeSet.add((CStrainee)trainee);
             } else {
-                eceTrainees.add((ECETrainee) typeTrainee);
+                eceTrainees.add((ECETrainee) trainee);
             }
         }
         displayAll();
