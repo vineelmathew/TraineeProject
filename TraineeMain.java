@@ -5,7 +5,6 @@ import java.util.Set;
 
 public class TraineeMain {
 
-
     Map<String, Trainee> traineemap = new HashMap<String, Trainee>();
     Set<CStrainee> cStraineeSet = new HashSet<>();
     Set<ECETrainee> eceTrainees = new HashSet<>();
@@ -33,6 +32,11 @@ public class TraineeMain {
                 eceTrainees.add((ECETrainee) typeTrainee);
             }
         }
+        displayAll();
+    }
+
+    public void displayAll()
+    {
         System.out.println("DISPLAYING CSE TRAINEES");
         for(CStrainee csset:cStraineeSet)
         {
