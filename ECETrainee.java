@@ -1,6 +1,6 @@
 public class ECETrainee extends Trainee {
     private String devices;
-    public ECETrainee(int id, String name,String devices) {
+    public ECETrainee(String id, String name, String devices) {
         super(id, name);
         this.devices=devices;
     }

@@ -6,7 +6,7 @@ import java.util.Set;
 public class TraineeMain {
 
 
-    Map<Integer, Trainee> traineemap = new HashMap<>();
+    Map<String, Trainee> traineemap = new HashMap<String, Trainee>();
     Set<CStrainee> cStraineeSet = new HashSet<>();
     Set<ECETrainee> eceTrainees = new HashSet<>();
 
@@ -16,10 +16,10 @@ public class TraineeMain {
     }
 
     public void runApp() {
-        Trainee trainee1 = new CStrainee(1, "vineel", 2);
-        Trainee trainee2 = new CStrainee(2, "rudrapati", 3);
-        Trainee trainee3 = new ECETrainee(3, "leo", "diode");
-        Trainee trainee4 = new ECETrainee(4, "dave", "PI");
+        Trainee trainee1 = new CStrainee("1", "vineel", 2);
+        Trainee trainee2 = new CStrainee("2", "rudrapati", 3);
+        Trainee trainee3 = new ECETrainee("3", "leo", "diode");
+        Trainee trainee4 = new ECETrainee("4", "dave", "PI");
         traineemap.put(trainee1.getId(), trainee1);
         traineemap.put(trainee2.getId(), trainee2);
         traineemap.put(trainee3.getId(), trainee3);
@@ -36,7 +36,7 @@ public class TraineeMain {
         System.out.println("DISPLAYING CSE TRAINEES");
         for(CStrainee csset:cStraineeSet)
         {
-            int id=csset.getId();
+            String id=csset.getId();
             int language=csset.getLanguages();
             String name=csset.getName();
         System.out.println("The name="+name+" Id="+id+" Languages="+language);
@@ -45,7 +45,7 @@ public class TraineeMain {
         System.out.println("DISPLAYING ECE TRAINEES");
         for(ECETrainee eceset:eceTrainees)
         {
-            int id=eceset.getId();
+            String id=eceset.getId();
             String devices=eceset.getDevices();
             String name=eceset.getName();
             System.out.println("The name="+name+" Id="+id+" devices="+devices);

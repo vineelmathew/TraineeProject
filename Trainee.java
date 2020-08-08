@@ -1,14 +1,14 @@
 public class Trainee {
-    private int id;
+    private String id;
     private String name;
-    public Trainee(int id, String name) {
+    public Trainee(String id, String name) {
         this.id = id;
         this.name = name;
     }
-    public int getId() {
+    public String getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
     public String getName() {
@@ -21,8 +21,8 @@ public class Trainee {
     
 public int hashCode()
 {
-    int hasid=id.hashCode();
-    return id;
+    int hashid=id.hashCode();
+    return hashid;
 }
 @Override
     public boolean equals(Object Arg) {
@@ -35,7 +35,7 @@ public int hashCode()
             return false;
         }
         Trainee that=(Trainee) Arg;
-        boolean isequal=this.id==that.id;
+        boolean isequal=this.id.equals(that.id);
         return isequal;
     }
 }
